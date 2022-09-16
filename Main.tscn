@@ -1,0 +1,143 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Ant.tscn" type="PackedScene" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://light.png" type="Texture" id=3]
+[ext_resource path="res://Resource.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 17, 507 )
+
+[node name="Main" type="Node2D"]
+position = Vector2( -5, -6 )
+
+[node name="Ant" parent="." instance=ExtResource( 1 )]
+position = Vector2( 369, 428 )
+rotation = 0.460767
+sideRaysLength = 200
+angleMaxRateChange = 45.0
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 262, 287 )
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( 318, 213 )
+
+[node name="Sprite" type="Sprite" parent="Area2D2"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource( 1 )
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2( 221, 358 )
+
+[node name="Sprite" type="Sprite" parent="Area2D3"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+shape = SubResource( 1 )
+
+[node name="Area2D4" type="StaticBody2D" parent="."]
+position = Vector2( 676, 341 )
+
+[node name="Sprite" type="Sprite" parent="Area2D4"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+shape = SubResource( 1 )
+
+[node name="Area2D5" type="Area2D" parent="."]
+position = Vector2( 682, 192 )
+
+[node name="Sprite" type="Sprite" parent="Area2D5"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
+shape = SubResource( 1 )
+
+[node name="Area2D6" type="Area2D" parent="."]
+position = Vector2( 680, 269 )
+
+[node name="Sprite" type="Sprite" parent="Area2D6"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6"]
+shape = SubResource( 1 )
+
+[node name="Area2D7" type="Area2D" parent="."]
+position = Vector2( 653, 112 )
+
+[node name="Sprite" type="Sprite" parent="Area2D7"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D7"]
+shape = SubResource( 1 )
+
+[node name="Area2D8" type="Area2D" parent="."]
+position = Vector2( 588, 46 )
+
+[node name="Sprite" type="Sprite" parent="Area2D8"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8"]
+shape = SubResource( 1 )
+
+[node name="wall" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+position = Vector2( -10, 497 )
+shape = SubResource( 2 )
+
+[node name="wall2" type="Area2D" parent="."]
+position = Vector2( 994, -8 )
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall2"]
+position = Vector2( -10, 497 )
+shape = SubResource( 2 )
+
+[node name="wall3" type="Area2D" parent="."]
+position = Vector2( 922, 526 )
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall3"]
+position = Vector2( -10, 497 )
+shape = SubResource( 2 )
+
+[node name="wall4" type="Area2D" parent="."]
+position = Vector2( 823, -53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall4"]
+position = Vector2( -10, 497 )
+shape = SubResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 70, 123 )
+texture = ExtResource( 3 )
+texture_scale = 0.82
+color = Color( 0.898039, 0.74902, 0.352941, 1 )
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 1 )
+
+[node name="Resource" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1142, -162 )
+rotation = -2.93913
+
+[node name="Ant2" parent="Resource" instance=ExtResource( 1 )]
+position = Vector2( 897.673, -495.63 )
+
+[node name="Ant2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 476, 172 )
+
+[node name="Ant3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 564, 447 )
